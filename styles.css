@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}  
+
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+html{
+    background-image: url('./imgs/background.svg') ;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    padding: 1vh 6vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15vh;
+}
+
+h1{
+    text-align: center;
+}
+
+.logo{
+    display: flex;
+    width: 5vw;
+    height: auto;
+    align-items: center;
+    column-gap: 10px;
+    pointer-events: none;
+}
+
+img{
+    width: 100%;
+}
+
+.title{
+    font-size: 150%;
+    font-family: 'Rubik',sans-serif;
+    color: #392F5A;
+}
+
+header{
+    align-items: center;
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul>li{
+    display: inline;
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #8989bd;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+li:not(:last-child){
+    margin-right: 10px;
+}
+
+a:hover{
+    background:#8585e9;
+    color: white;
+}
+
+#search{
+    padding: 10px 10px;
+    width: 60%;
+    font-size: 20px;
+    outline: none;
+    border: 2px solid #392F5A;
+    transition: width .5s;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.search{
+    width: 30vw;
+}
+
+.focus{
+    box-shadow: 10px 10px 10px   #392F5A !important;
+    border: none !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+}
+
+.input{
+    background-color: aqua;
+}
+
+#search:hover{
+    cursor: text;
+}
+
+.drop-down{
+    overflow: scroll;
+    width: inherit;
+    height: auto;
+    background: white;
+    position: absolute;
+    box-shadow: 10px 10px 10px #392F5A;
+    display: none;
+    max-height: 350px;
+    z-index: 2;
+}
+
+#countries li{
+    display: block;
+    padding: 10px;
+    z-index: 2;
+    transition: all .5s;
+}
+
+#countries li:hover,.hover{
+    cursor: pointer;
+    background: #8585e9;
+    color: white;
+}
+
+li span{
+    height: 100%;
+    margin: 10px 0;
+    pointer-events: none;
+}
+
+main{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 52% auto;
+    column-gap: 100px;
+}
+
+.intro{
+    position: relative;
+}
+
+.intro span{
+    display: block;
+}
+
+#intro-title,#country-name{
+    font-family: 'Rubik',sans-serif;
+    font-size: 4vw;
+    margin-bottom: 20px;
+    color: white;
+    pointer-events: none;
+}
+
+#intro-subtitle{
+    width: 80%;
+    line-height: 30px;
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    color: rgb(94, 90, 90);
+    margin-bottom: 50px;
+}
+
+.get-started{
+    border: 2px solid #ffff;
+    border-radius: 5px;
+    background: #2589BD;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    overflow: hidden;
+    width: 150px;
+    position: relative;
+}
+
+.get-started span{
+    transition: all .5s;
+}
+
+.main-img{
+    overflow: hidden;
+}
+
+#w-svg{
+    position: relative;
+}
+
+#right-side-text{
+    z-index: 2;
+    left: 56%;
+    bottom: -2%;
+    width: 80vw;
+    position: absolute;
+    color: #2589BD;
+    opacity: 0.4;
+    font-size: 5vw;
+    transform: rotate(90deg);
+}
+
+#thank-you{
+    width: inherit;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.weather-details{
+    position: absolute;
+    width: inherit;
+    height: auto;
+    transition: all .5s;
+    top: -100%;
+    opacity: 0;
+}
+
+
+.landing{
+    transition: all .5s;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    header{
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        row-gap: 20px;
+        height: auto;
+        width: 100%;
+    }
+    header *{
+        display: block;
+        width: 100%;
+    }
+    #search{
+        width: 200px;
+        
+    }
+    .logo{
+        width: 100px;
+    }
+}
+
+/* 
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    display: block;
+     overflow: scroll;
+    width: inherit;
+    height: auto;
+    background: white;
+    position: absolute;
+    box-shadow: 10px 10px 10px #392F5A;
+    max-height: 350px;
+    z-index: 2; 
+    width: inherit;
+    position: absolute;
+  }
+*/
+a:link{
+    color: red;
+}

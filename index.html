@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./imgs/logo.png">
+            <span class="title">Weather</span>
+        </div>
+        <div class="search">
+            <input  autocomplete="off" type="text" placeholder="Type your COUNTRY" id="search" required>
+            <div class="drop-down">
+                
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <div class="weather-details">
+                <h1 id="country-name"></h1>
+            </div>
+            <div class="landing">
+                <span  id="intro-title">
+                    Creative <strong>Development</strong> <br> Gives user Superpowers
+                </span>
+                <span id="intro-subtitle">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat enim dignissimos nam dicta sapiente aperiam reiciendis officiis rem dolore!
+                </span>
+                <button class="get-started"><span id="thank-you">Thank You</span><span id="start">Get Started</span></button>
+
+            </div>
+        </div>
+        <div class="main-img">
+            <img id="w-svg" src="./imgs/main-img.svg" alt="">
+            <span id="right-side-text">PLAN YOUR DAY</span>
+        </div>
+    </main>
+
+</body>
+<script src="./app.js"></script>
+</html>
